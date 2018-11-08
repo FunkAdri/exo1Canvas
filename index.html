@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Canvas</title>
+  </head>
+  <body>
+    <canvas id="Canvas1" width="350" height="350">
+  Je suis Oui, alors Oui le Oui du mois suivant.
+</canvas>
+
+<script type="text/javascript">
+  var c = document.getElementById("Canvas1");
+  var ctx = c.getContext("2d");
+
+// Toit
+ctx.beginPath(); // Début du chemin
+ctx.moveTo(175,50); // Le tracé part du point 50,50
+ctx.lineTo(230,100); // Un segment est ajouté vers 200,200
+ctx.lineTo(120,100); // Un segment est ajouté vers 200,200
+ctx.lineTo(175,50); // Un segment est ajouté vers 200,200
+ctx.closePath(); // Fermeture du chemin
+ctx.fillStyle = "#ce8539"; // Selection de la couleur du remplissage
+ctx.strokeStyle = "#ce8539"; // Selection de la couleur des contours
+ctx.fill(); // On remplie
+ctx.stroke(); // On met des contours
+
+// Mur
+ctx.beginPath(); // Début du chemin
+ctx.moveTo(120,100); // Puis on saute jusqu'à 120,100
+ctx.lineTo(230,100); // Puis on trace jusqu'à 230,100
+ctx.lineTo(230,190); // Puis on trace jusqu'à 230,190
+ctx.lineTo(120,190); // Puis on trace jusqu'à 120,190
+ctx.lineTo(120,100); // Puis on trace jusqu'à 120,100
+ctx.closePath(); // Fermeture du chemin
+ctx.fillStyle = "#a9d7e6";
+ctx.strokeStyle = "#a9d7e6";
+ctx.fill();
+ctx.stroke();
+
+// Porte
+ctx.beginPath();
+ctx.moveTo(160,190);
+ctx.lineTo(190,190);
+ctx.lineTo(190,140);
+ctx.lineTo(160,140);
+ctx.lineTo(160,190);
+ctx.closePath();
+ctx.fillStyle = "#c9c9c9";
+ctx.strokeStyle = "#c9c9c9";
+ctx.fill();
+ctx.stroke();
+
+// Fenêtres
+ctx.beginPath();
+ctx.moveTo(125,110);
+ctx.lineTo(145,110);
+ctx.lineTo(145,130);
+ctx.lineTo(125,130);
+ctx.lineTo(125,110);
+ctx.moveTo(205,110);
+ctx.lineTo(225,110);
+ctx.lineTo(225,130);
+ctx.lineTo(205,130);
+ctx.lineTo(205,110);
+ctx.closePath();
+ctx.fillStyle = "#c9c9c9";
+ctx.strokeStyle = "#c9c9c9";
+ctx.fill();
+ctx.stroke();
+</script>
+
+  </body>
+</html>
